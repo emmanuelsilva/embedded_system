@@ -7,3 +7,22 @@
 //
 
 #include "Reader.h"
+
+using namespace std;
+
+Reader::Reader(int channel) {
+    this->channel = channel;
+}
+
+Reader::~Reader() {
+    
+}
+
+int Reader::getChannel() {
+    return this->channel;
+}
+
+int Reader::getValue() {
+    return 0;
+}
+

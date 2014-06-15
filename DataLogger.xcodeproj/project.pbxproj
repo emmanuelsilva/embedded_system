@@ -10,6 +10,7 @@
 		4E5D0337194E4E12003066A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D0336194E4E12003066A0 /* main.cpp */; };
 		4E5D0339194E4E12003066A0 /* DataLogger.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E5D0338194E4E12003066A0 /* DataLogger.1 */; };
 		4E5D0341194E4E5E003066A0 /* Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D033F194E4E5E003066A0 /* Reader.cpp */; };
+		4E5D0345194E514E003066A0 /* DigitalReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D0343194E514E003066A0 /* DigitalReader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		4E5D0338194E4E12003066A0 /* DataLogger.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DataLogger.1; sourceTree = "<group>"; };
 		4E5D033F194E4E5E003066A0 /* Reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Reader.cpp; sourceTree = "<group>"; };
 		4E5D0340194E4E5E003066A0 /* Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = Reader.h; sourceTree = "<group>"; tabWidth = 2; };
+		4E5D0343194E514E003066A0 /* DigitalReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalReader.cpp; sourceTree = "<group>"; };
+		4E5D0344194E514E003066A0 /* DigitalReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalReader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +68,20 @@
 			children = (
 				4E5D0336194E4E12003066A0 /* main.cpp */,
 				4E5D0338194E4E12003066A0 /* DataLogger.1 */,
-				4E5D033F194E4E5E003066A0 /* Reader.cpp */,
-				4E5D0340194E4E5E003066A0 /* Reader.h */,
+				4E5D0342194E512B003066A0 /* Reader */,
 			);
 			path = DataLogger;
+			sourceTree = "<group>";
+		};
+		4E5D0342194E512B003066A0 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				4E5D033F194E4E5E003066A0 /* Reader.cpp */,
+				4E5D0340194E4E5E003066A0 /* Reader.h */,
+				4E5D0343194E514E003066A0 /* DigitalReader.cpp */,
+				4E5D0344194E514E003066A0 /* DigitalReader.h */,
+			);
+			name = Reader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +137,7 @@
 			files = (
 				4E5D0341194E4E5E003066A0 /* Reader.cpp in Sources */,
 				4E5D0337194E4E12003066A0 /* main.cpp in Sources */,
+				4E5D0345194E514E003066A0 /* DigitalReader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
