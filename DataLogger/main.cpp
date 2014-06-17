@@ -7,12 +7,12 @@
 //
 
 #include <iostream>
+#include "SchedulerReadTask.h"
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    SchedulerReadTask scheduler(60, 10); //nos proximos 60 segundos de 10 em 10 segundos
+    scheduler.start();
     return 0;
 }
 
