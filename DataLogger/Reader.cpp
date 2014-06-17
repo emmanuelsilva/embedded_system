@@ -12,10 +12,11 @@ using namespace std;
 
 Reader::Reader(int channel) {
     this->channel = channel;
+    //TODO - Ligar pino
 }
 
 Reader::~Reader() {
-    
+    //TODO - Desligar pino
 }
 
 int Reader::getChannel() {

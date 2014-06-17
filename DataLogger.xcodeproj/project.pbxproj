@@ -11,6 +11,8 @@
 		4E5D0339194E4E12003066A0 /* DataLogger.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E5D0338194E4E12003066A0 /* DataLogger.1 */; };
 		4E5D0341194E4E5E003066A0 /* Reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D033F194E4E5E003066A0 /* Reader.cpp */; };
 		4E5D0345194E514E003066A0 /* DigitalReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D0343194E514E003066A0 /* DigitalReader.cpp */; };
+		4E5D0348194FD8AA003066A0 /* AnalogicReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D0346194FD8AA003066A0 /* AnalogicReader.cpp */; };
+		4E5D034D194FDA36003066A0 /* DataLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D034B194FDA36003066A0 /* DataLogger.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,12 @@
 		4E5D0340194E4E5E003066A0 /* Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = Reader.h; sourceTree = "<group>"; tabWidth = 2; };
 		4E5D0343194E514E003066A0 /* DigitalReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DigitalReader.cpp; sourceTree = "<group>"; };
 		4E5D0344194E514E003066A0 /* DigitalReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitalReader.h; sourceTree = "<group>"; };
+		4E5D0346194FD8AA003066A0 /* AnalogicReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnalogicReader.cpp; sourceTree = "<group>"; };
+		4E5D0347194FD8AA003066A0 /* AnalogicReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogicReader.h; sourceTree = "<group>"; };
+		4E5D034A194FD93E003066A0 /* Structure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Structure.h; sourceTree = "<group>"; };
+		4E5D034B194FDA36003066A0 /* DataLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataLogger.cpp; sourceTree = "<group>"; };
+		4E5D034C194FDA36003066A0 /* DataLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLogger.h; sourceTree = "<group>"; };
+		4E5D0352194FDE60003066A0 /* FormatHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormatHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,12 @@
 		4E5D0335194E4E12003066A0 /* DataLogger */ = {
 			isa = PBXGroup;
 			children = (
+				4E5D034F194FDDC2003066A0 /* Helper */,
+				4E5D0349194FD922003066A0 /* Structure */,
 				4E5D0336194E4E12003066A0 /* main.cpp */,
 				4E5D0338194E4E12003066A0 /* DataLogger.1 */,
 				4E5D0342194E512B003066A0 /* Reader */,
+				4E5D034E194FDBF0003066A0 /* Logger */,
 			);
 			path = DataLogger;
 			sourceTree = "<group>";
@@ -80,8 +91,35 @@
 				4E5D0340194E4E5E003066A0 /* Reader.h */,
 				4E5D0343194E514E003066A0 /* DigitalReader.cpp */,
 				4E5D0344194E514E003066A0 /* DigitalReader.h */,
+				4E5D0346194FD8AA003066A0 /* AnalogicReader.cpp */,
+				4E5D0347194FD8AA003066A0 /* AnalogicReader.h */,
 			);
 			name = Reader;
+			sourceTree = "<group>";
+		};
+		4E5D0349194FD922003066A0 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				4E5D034A194FD93E003066A0 /* Structure.h */,
+			);
+			name = Structure;
+			sourceTree = "<group>";
+		};
+		4E5D034E194FDBF0003066A0 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				4E5D034B194FDA36003066A0 /* DataLogger.cpp */,
+				4E5D034C194FDA36003066A0 /* DataLogger.h */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
+		4E5D034F194FDDC2003066A0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4E5D0352194FDE60003066A0 /* FormatHelper.h */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5D0348194FD8AA003066A0 /* AnalogicReader.cpp in Sources */,
 				4E5D0341194E4E5E003066A0 /* Reader.cpp in Sources */,
 				4E5D0337194E4E12003066A0 /* main.cpp in Sources */,
+				4E5D034D194FDA36003066A0 /* DataLogger.cpp in Sources */,
 				4E5D0345194E514E003066A0 /* DigitalReader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
