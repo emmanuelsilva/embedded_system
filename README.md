@@ -1,4 +1,4 @@
 embedded_system
 ===============
 
-Repository for my embedded system sources and my computer engineer coursework.
+Repository for my c++ embedded system _sources_.
