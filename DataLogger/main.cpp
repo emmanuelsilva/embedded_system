@@ -11,7 +11,15 @@
 
 int main(int argc, const char * argv[])
 {
-    SchedulerReadTask scheduler(60, 10); //nos proximos 60 segundos de 10 em 10 segundos
+    int period, interval;
+    
+    cout << "Informe o período para coleta (em segundos):" << endl;
+    cin >> period;
+    
+    cout << "Informe o intervalo (em segundos): " << endl;
+    cin >> interval;
+    
+    SchedulerReadTask scheduler(period, interval);
     scheduler.start();
     //teste
     return 0;
