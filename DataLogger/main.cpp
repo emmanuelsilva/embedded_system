@@ -13,6 +13,7 @@ int main(int argc, const char * argv[])
 {
     SchedulerReadTask scheduler(60, 10); //nos proximos 60 segundos de 10 em 10 segundos
     scheduler.start();
+    //teste
     return 0;
 }
 
