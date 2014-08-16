@@ -7,10 +7,11 @@
 //
 
 #include <unistd.h>
+#include "Reader.h"
 #include "SchedulerReadTask.h"
 #include "FormatHelper.h"
 
-SchedulerReadTask::SchedulerReadTask(int period, int interval) {
+SchedulerReadTask::SchedulerReadTask(int period, int interval) : reader("/dev/tty.usbmodemfa131") {
     this->period = period;
     this->interval = interval;
 }
@@ -24,16 +25,9 @@ void SchedulerReadTask::write(ReadData data) {
 }
 
 ReadData SchedulerReadTask::read(time_t currentTime) {
-    ReadData sample;
-    sample.time = time(&currentTime);
-    sample.analogicData[0] = 30; //ler da voltageReader
-    sample.analogicData[1] = 25; //ler da currentReader
-    
-    for (int i = 0; i<6;i++) {
-        sample.digitalData[i] = i; //ler da DigitalReader
-    }
-    
-    return sample;
+    ReadData data = reader.getValue();
+    data.time = time(&currentTime);
+    return data;
 }
 
 void SchedulerReadTask::start() {
@@ -60,7 +54,7 @@ void SchedulerReadTask::start() {
         string formatedCurrentTime = FormatHelper::formatTime(currentTime);
         cout << "Executou em: " << formatedCurrentTime << endl;
         
-        sleep(this->interval); //em segundos
+        sleep(this->interval - 1); //em segundos
     }
     
     cout << "Fim da execucao" << endl;

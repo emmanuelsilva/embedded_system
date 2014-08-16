@@ -13,12 +13,14 @@
 #include <time.h>
 #include "Structure.h"
 #include "DataLogger.h"
+#include "Reader.h"
 
 class SchedulerReadTask {
 private:
     int period;
     int interval;
     DataLogger logger;
+    Reader reader;
     
 public:
     SchedulerReadTask(int period, int interval);

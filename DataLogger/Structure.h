@@ -16,6 +16,7 @@ using namespace std;
 typedef struct {
     short analogicData[2];
 	unsigned short digitalData[6];
+    string data;
     time_t time;
 } ReadData;
 

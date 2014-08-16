@@ -7,21 +7,37 @@
 //
 
 #include <iostream>
+#include <unistd.h>
 #include "SchedulerReadTask.h"
+#include "Reader.h"
+
 
 int main(int argc, const char * argv[])
 {
     int period, interval;
+    bool ok;
     
-    cout << "Informe o período para coleta (em segundos):" << endl;
-    cin >> period;
-    
-    cout << "Informe o intervalo (em segundos): " << endl;
-    cin >> interval;
+    period = 0;
+    interval = 0;
+    ok = false;
+
+    while (!ok) {
+        cout << "Informe o período para coleta (em segundos):" << endl;
+        cin >> period;
+        
+        cout << "Informe o intervalo (em segundos): " << endl;
+        cin >> interval;
+        
+        ok = interval >= 2;
+        
+        if (!ok) {
+            cout << "O intervalo minimo é de 2 segundos" << endl;
+        }
+    }
     
     SchedulerReadTask scheduler(period, interval);
     scheduler.start();
-    //teste
+    
     return 0;
 }
 

@@ -9,20 +9,26 @@
 #ifndef __DataLogger__Reader__
 #define __DataLogger__Reader__
 
+#include <fstream>
 #include <iostream>
+#include "Structure.h"
 
 using namespace std;
 
 class Reader {
     
 private:
-    int channel;
+  string port;
+  string getDataFromArduino();
+  void openSerialConnection();
+  void closeSerialConnection();
+  
     
 public:
-    Reader(int channel);
+    Reader(string port);
     virtual ~Reader();
-    int getChannel();
-    int getValue();
+    string getPort();
+    ReadData getValue();
   
 };
 

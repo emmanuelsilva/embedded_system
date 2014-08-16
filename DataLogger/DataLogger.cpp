@@ -40,7 +40,9 @@ void DataLogger::log(ReadData data) {
     string line;
     line.append(FormatHelper::formatTime(data.time));
     line.append(";");
+    line.append(data.data);
     
+    /*
     int analogicSize = sizeof(data.analogicData) / sizeof(*data.analogicData);
     int digitalSize = sizeof(data.digitalData) / sizeof(*data.digitalData);
     
@@ -53,6 +55,7 @@ void DataLogger::log(ReadData data) {
         line.append(to_string(data.digitalData[i]));
         line.append(";");
     }
+     */
     
     stream << line << "\n";
     stream.flush();
