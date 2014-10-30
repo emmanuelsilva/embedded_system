@@ -20,7 +20,7 @@ private:
     int period;
     int interval;
     DataLogger logger;
-    Reader reader;
+    Reader *reader;
     
 public:
     SchedulerReadTask(int period, int interval);

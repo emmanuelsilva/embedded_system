@@ -11,7 +11,8 @@
 #include "SchedulerReadTask.h"
 #include "FormatHelper.h"
 
-SchedulerReadTask::SchedulerReadTask(int period, int interval) : reader("/dev/tty.usbmodemfa131") {
+SchedulerReadTask::SchedulerReadTask(int period, int interval) {
+    reader = new Reader("/dev/tty.usbmodemfa131");
     this->period = period;
     this->interval = interval;
 }
@@ -25,7 +26,7 @@ void SchedulerReadTask::write(ReadData data) {
 }
 
 ReadData SchedulerReadTask::read(time_t currentTime) {
-    ReadData data = reader.getValue();
+    ReadData data = reader->getValue();
     data.time = time(&currentTime);
     return data;
 }
